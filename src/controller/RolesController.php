@@ -13,6 +13,11 @@ class RolesController extends Controller
     public function getAll(){
         $rolesdb = new RolesDb();
         $roles = $rolesdb->findAll();
-        return $this->view->load("roles/getAll",$roles);
+
+        var_dump($roles);
+        foreach ($roles as $role){
+            echo $role."</br>";
+        }
+        //return $this->view->load("roles/getAll",$roles);
     }
 }

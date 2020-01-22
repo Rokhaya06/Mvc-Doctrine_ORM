@@ -1,7 +1,7 @@
 <?php
 namespace libs\system;
 
-class Bootstrap
+class Bootstraplib
 {
     public function __construct()
     {
