@@ -1,7 +1,8 @@
 <?php
 namespace src\model;
 use libs\system\Model;
-class RolesDb
+
+class RolesDb extends Model
 {
     public function add()
     {
@@ -9,6 +10,9 @@ class RolesDb
     }
     public function findAll()
     {
-        return array("Role_COMPTA","Role_FINACE");
+        return $this->entityManager
+        ->createQuery("select r from Roles r")
+        ->getResult();
+        //return array("Role_COMPTA","Role_FINANCE");
     }
 }

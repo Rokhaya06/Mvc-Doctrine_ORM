@@ -9,8 +9,10 @@ class Model
     {
         require_once "bootstrap.php";
 
-        /**$entityManager =$entityManager;
+        $entityManager =$entityManager;
         $this->entityManager = $entityManager;
-    **/}
+    }
+
+
 
 }

@@ -11,13 +11,20 @@ class RolesController extends Controller
     }
 
     public function getAll(){
-        $rolesdb = new RolesDb();
-        $roles = $rolesdb->findAll();
+        $roles_dao = new RolesDb();
+        $roles = $roles_dao->findAll();
+        return $this->view->load("roles/getAll",$roles);
 
-        var_dump($roles);
+       /* var_dump($roles);
         foreach ($roles as $role){
-            echo $role."</br>";
+            echo $role."</br>";*/
         }
-        //return $this->view->load("roles/getAll",$roles);
+        public function delete()
+        {
+            echo $id;
+            //return $this->view->load("roles/add");
+        }
+    
+        
     }
-}
+

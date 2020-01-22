@@ -1,4 +1,5 @@
 <?php
     foreach ($data as $role){
-        echo $role->getId()." ".$role->getNom()."</br>";
+        //print_r($role);
+        echo $role->getId()." " .$role->getNom()."</br>";
 }
